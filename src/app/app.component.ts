@@ -6,15 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  navigateTo: string = 'recipe';
 
-  constructor() {
-    console.log('Constructor called!');
-  }
+  constructor() {}
 
   ngOnInit() {}
-
-  onNavigate(navigateTo: string) {
-    this.navigateTo = navigateTo;
-  }
 }
