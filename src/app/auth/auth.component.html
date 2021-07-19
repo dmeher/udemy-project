@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <form #authForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" class="form-control" ngModel required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control" ngModel required>
+                </div>
+                <button class="btn btn-success" type="submit" [disabled]="authForm.invalid">{{ isLogin ? 'Login' : 'Sign Up' }}</button> |
+                <button class="btn btn-primary" type="button" (click)="isLogin = !isLogin">{{ !isLogin ? 'Login' : 'Sign Up' }}</button>
+            </form>
+        </div>
+    </div>
+</div>
